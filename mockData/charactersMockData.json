@@ -1,0 +1,106 @@
+[
+  {
+    "id" : 1 ,
+    "name" : "Harry James Potter",
+    "description" : "The protagonist of the story, who is gradually transformed from timid weakling to powerful hero by the end. Marked on the forehead with a lightning-shaped scar, Harry is marked also by the confrontation between good and bad magic that caused that scar: the standoff between the evil Voldemort and his parents who died to save their son. The story eventually becomes a tale of Harry’s vengeance for their wrongful deaths. As he matures, he shows himself to be caring and shrewd, a loyal friend, and an excellent Quidditch player.",
+    "movies" :  [],
+    "actor" : "Daniel Radcliffe",
+    "image" : ""
+  },
+  {
+    "id" : 2 ,
+    "name" : "Ron Weasley",
+    "description" : "A shy, modest boy who comes from an impoverished wizard family. Ron is Harry’s first friend at Hogwarts, and they become close. He lacks Harry’s gusto and charisma, but his loyalty and help are useful to Harry throughout their adventures. Ron’s mediocrity despite his wizard background reminds us that success at Hogwarts is based solely on talent and hard work, not on family connections. Ron’s willingness to be beaten up by the monstrous chess queen shows how selfless and generous he is.",
+    "movies" :  [],
+    "actor" : "Rupert Grint",
+    "image" : ""
+  },
+  {
+    "id" : 3 ,
+    "name" : "Hermione Jean Granger",
+    "description" : "Initially an annoying goody-two-shoes who studies too much and obeys the school rules too zealously. Hermione eventually becomes friendly with Harry after she learns to value friendship over perfectionism and obedience. She comes from a purely Muggle family, and her character illustrates the social-adjustment problems often faced by new students at Hogwarts.",
+    "movies" :  [],
+    "actor" : "Emma Watson",
+    "image" : ""
+  },
+  {
+    "id" : 4 ,
+    "name" : "Albus Percival Wulfric Brian Dumbledore",
+    "description" : "The kind, wise head of Hogwarts. Though he is a famous wizard, Dumbledore is as humble and adorable as his name suggests. While other school officials, such as Professor McGonagall, are obsessed with the rules, Dumbledore respects them (as his warnings against entering the Forbidden Forest remind us) but does not exaggerate their importance. He appears to have an almost superhuman level of wisdom, knowledge, and personal understanding, and it seems that he may have set up the whole quest for the Sorcerer’s Stone so that Harry could prove himself.",
+    "movies" :  [],
+    "actor" : "Richard Harris",
+    "image" : ""
+  },
+  {
+    "id" : 5 ,
+    "name" : "Sirius Black",
+    "description" : "Harry's surrogate father figure and Askaban prison escapee who later gives his life to help Harry lead the fight against Lord Voldemort.",
+    "movies" :  [],
+    "actor" : "Gary Oldman",
+    "image" : ""
+  },
+  {
+    "id" : 6 ,
+    "name" : "Lord Voldemort",
+    "description" : "A great wizard gone bad. When he killed Harry’s parents, Voldemort gave Harry a lightning-shaped scar. Voldemort has thus shaped Harry’s life so that Harry’s ultimate destruction of him appears as a kind of vengeance. Voldemort, whose name in French means either “flight of death” or “theft of death,” is associated both with high-flying magic and with deceit throughout the story. He is determined to escape death by finding the Sorcerer’s Stone. Voldemort’s weak point is that he cannot understand love, and thus cannot touch Harry’s body, which still bears the traces of Harry’s mother’s love for her son.",
+    "movies" :  [],
+    "actor" : "Ralph Fiennes",
+    "image" : ""
+  },
+  {
+    "id" : 7 ,
+    "name" : "Severus Snape",
+    "description" : "A professor of Potions at Hogwarts. Severus Snape dislikes Harry and appears to be an evil man for most of the story. His name associates him not only with unfair snap judgments of others but also with his violent intentions to snap the bones of his enemies. Snape’s grudge against Harry, which is nevertheless far from a murderous ill will, helps us remember the difference between forgivable vices and unforgivable evil intentions.",
+    "movies" :  [],
+    "actor" : "Alan Rickman",
+    "image" : ""
+  },
+  {
+    "id" : 8 ,
+    "name" : "Draco Malfoy",
+    "description" : "An arrogant student and Harry’s nemesis. Malfoy, whose name translates roughly to “dragon of bad faith,” is a rich snob from a long line of wizards who feels entitled to the Hogwarts experience. He makes fun of the poorer Ron Weasley and advises Harry to choose his friends more carefully. As the story progresses, Malfoy becomes more and more inimical to Harry and his friends, and there is a hint that he may grow up to become another Voldemort.",
+    "movies" :  [],
+    "actor" : "Tom Felton",
+    "image" : ""
+  },
+  {
+    "id" : 9 ,
+    "name" : "Minerva McGonagall",
+    "description" : "The head of Gryffindor House at Hogwarts and a high-ranking woman in the wizard world. Minerva McGonagall is fair but extremely stern and severe in her punishments. Her devotion to the letter of the law is impressive but a bit cold, and we constantly feel that she could never become a warm and wise figure like Dumbledore. Rowling named her after a notoriously bad nineteenth-century Scottish poet named William McGonagall who was nevertheless highly confident of his own talents.",
+    "movies" :  [],
+    "actor" : "Maggie Smith",
+    "image" : ""
+  },
+  {
+    "id" : 10 ,
+    "name" : "Rubeus Hagrid",
+    "description" : "An oafish giant who works as a groundskeeper at Hogwarts. Rubeus Hagrid is a well-meaning creature with more kindness than brains. He cares deeply for Harry, as evidenced by the tears he sheds upon having to leave the infant Harry with the Dursleys. His fondness for animals is endearing, even if it gets him into trouble (as when he tries raising a dragon at home). Hagrid symbolizes the importance of generosity and human warmth in a world menaced by conniving villains.",
+    "movies" :  [],
+    "actor" : "Robbie Coltrane",
+    "image" : ""
+  },
+  {
+    "id" : 11 ,
+    "name" : "Remus Lupin",
+    "description" : "Hogwart's Defense Against the Dark Arts teacher who teams with Sirius Black to help Harry lead the charge against Lord Voldemort.",
+    "movies" :  [],
+    "actor" : "David Thewil",
+    "image" : ""
+  },
+  {
+    "id" : 12 ,
+    "name" : "Bellatrix Lestrange",
+    "description" : "Crazily wicked minion of Lord Voldemort and one of the first female Death Eaters introduced into the story.",
+    "movies" :  [],
+    "actor" : "Helena Bonham Carter",
+    "image" : ""
+  },
+  {
+    "id" : 13 ,
+    "name" : "Argus Filch",
+    "description" : "Filch usually wandered around the school corridors with his cat Mrs Norris, trying to catch students breaking the school rules and complaining about Peeves the Poltergeist.",
+    "movies" :  [],
+    "actor" : "David Bradley",
+    "image" : ""
+  }
+]

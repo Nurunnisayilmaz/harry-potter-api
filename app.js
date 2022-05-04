@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-mongoose.connect('url', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://nisa:55785578nN@cluster0.vic2c.mongodb.net/harryPotterApi?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 const indexRouter = require('./routes/index');
 app.use('/api', indexRouter)

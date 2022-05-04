@@ -1,59 +1,60 @@
 [
   {
-    "id" : 1 ,
+    "_id" : 1 ,
     "name" : "Expecto Patronum",
     "description" : "Patronus Charm",
     "movies" : []
   },
   {
-    "id" : 2 ,
+    "_id" : 2 ,
     "name" : "Accio",
     "description" : "Summoning charm",
     "movies" : []
   },
   {
-    "id" : 3 ,
+    "_id" : 3 ,
     "name" : "Wingardium Leviosa",
     "description" : "Levitates objects",
     "movies" : []
   },
   {
-    "id" : 4 ,
+    "_id" : 4 ,
     "name" : "Expelliarmus",
     "description" : "Disarming Charm",
     "movies" : []
   },
   {
-    "id" : 5 ,
+    "_id" : 5 ,
     "name" : "Lumos",
     "description" : "Makes wand emit light",
     "movies" : []
   },
   {
-    "id" : 6 ,
+    "_id" : 6 ,
     "name" : "Alohomora",
     "description" : "Opens locks",
     "movies" : []
   },
   {
-    "id" : 7 ,
+    "_id" : 7 ,
     "name" : "Avada Kedavra",
     "description" : "The Killing Curse",
     "movies" : []
   },
   {
-    "id" : 8 ,
+    "_id" : 8 ,
     "name" : "Sectumsempra",
     "description" : "Causes severe lacerations",
     "movies" : []
-  },{
-  "id" : 9 ,
+  },
+  {
+  "_id" : 9 ,
   "name" : "Obliviate",
   "description" : "Erases memories",
   "movies" : []
 },
   {
-    "id" : 10 ,
+    "_id" : 10 ,
     "name" : "Riddikulus",
     "description" : "Transforms Boggarts into a humorous shape",
     "movies" : []

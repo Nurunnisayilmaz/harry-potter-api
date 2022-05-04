@@ -1,14 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-//eslint
-//prettier
-
 const MovieSchema = new Schema({
-    _id : {
-        type: Number,
-        required:true
-    },
     name : {
         type: String,
         required: true

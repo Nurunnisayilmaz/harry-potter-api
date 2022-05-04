@@ -15,7 +15,7 @@ const addNewMovie = async (req, res) => {
     const {name,description,characters,spells,image} = req.body;
 
     try {
-        const data = await Movie({
+        const data = Movie({
             name,
             description,
             characters,

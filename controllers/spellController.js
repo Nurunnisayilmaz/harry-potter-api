@@ -12,7 +12,7 @@ const addNewSpell = async (req, res) => {
 
     const {name, description, movies} = req.body;
     try {
-        const data = await Spell({
+        const data = Spell({
             name,
             description,
             movies

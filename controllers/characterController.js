@@ -13,7 +13,7 @@ const addNewCharacter = async (req, res) => {
     const {name,description,movies,actor,image} = req.body;
 
     try {
-        const data =Character({
+        const data = await Character({
             name,
             description,
             movies,

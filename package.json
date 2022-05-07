@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "mock": "node ./mockData/importMockData.js",
-    "test": "mocha --timeout 10000"
+    "test": "mocha --timeout 15000"
   },
   "author": "",
   "license": "ISC",

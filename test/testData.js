@@ -64,11 +64,14 @@ module.exports.erorUpdateCharacter = {
 }
 
 module.exports.updateMovie = {
+
+    existedId : '627641d59491033c1ce80212',
+    data:{
     name:'fffff',
     description:'zdgsfhd',
     characters:[3,0],
     spells:[5,7],
-    image:'sfgdhfj'
+    image:'sfgdhfj'}
 }
 
 module.exports.erorUpdateMovie = {

@@ -27,7 +27,7 @@ chai.use(chaiHttp);
 
 describe("API TEST", () => {
 
-    /*
+   /*
     * Test the add new character
     */
     describe("POST /", () => {
@@ -62,8 +62,7 @@ describe("API TEST", () => {
         });
     });
 
-
-    /*
+   /*
     * Test the update character
     */
     describe("PUT /", () => {
@@ -88,6 +87,77 @@ describe("API TEST", () => {
             chai.request(server)
                 .put("/api/character/" + updateCharacter.existedId)
                 .send(character)
+                .end((err, response) => {
+                    response.should.have.status(400);
+                    response.should.have.property('error');
+                    response.body.should.be.a('object');
+                    done();
+                });
+        });
+    });
+
+   /*
+    * Test the add new movie
+    */
+    describe("POST /", () => {
+        it("It should POST ", (done) => {
+            const movie = fakeMovie
+            chai.request(server)
+                .post("/api/movie/newMovie")
+                .send(movie)
+                .end((err, response) => {
+                    response.should.have.status(200);
+                    response.body.data.should.be.a('object');
+                    response.body.data.name.should.be.a('string');
+                    response.body.data.description.should.be.a('string');
+                    response.body.data.characters.should.be.a('array');
+                    response.body.data.spells.should.be.a('array');
+                    response.body.data.image.should.be.a('string');
+                    done();
+                });
+        });
+
+        it("It should not POST ", (done) => {
+            const movie = erorMovie
+            chai.request(server)
+                .post("/api/movie/newMovie")
+                .send(movie)
+                .end((err, response) => {
+                    response.should.have.status(400);
+                    response.should.have.property('error');
+                    response.body.should.be.a('object');
+                    done();
+                });
+        });
+    });
+
+   /*
+    * Test the update movie
+    */
+    describe("PUT /", () => {
+        it("It should PUT ", (done) => {
+            const movie = updateMovie.data
+            chai.request(server)
+                .put("/api/movie/"+updateMovie.existedId)
+                .send(movie)
+                .end((err, response) => {
+                    response.should.have.status(200);
+                    response.body.updateMovie.should.be.a('object');
+                    response.body.updateMovie.name.should.be.a('string');
+                    response.body.updateMovie.description.should.be.a('string');
+                    response.body.updateMovie.characters.should.be.a('array');
+                    response.body.updateMovie.spells.should.be.a('array');
+                    response.body.updateMovie.image.should.be.a('string');
+                    done();
+                });
+        });
+
+
+        it("It should not PUT ", (done) => {
+            const movie = erorUpdateMovie.data
+            chai.request(server)
+                .put("/api/movie/"+updateMovie.existedId)
+                .send(movie)
                 .end((err, response) => {
                     response.should.have.status(400);
                     response.should.have.property('error');

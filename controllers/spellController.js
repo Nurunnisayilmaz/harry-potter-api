@@ -3,13 +3,12 @@ const Spell = require('../models/spellModel')
 const getAllSpells = async (req, res) => {
     try {
         const allSpells = await Spell.find();
-        res.status(200).json({status: 'success', allSpells: allSpells})
+        return res.status(200).json({status: 'success', allSpells: allSpells})
     } catch (e) {
-        res.status(201).json({code: 201, message: "something went wrong", error: e})
+        return res.status(201).json({code: 201, message: "something went wrong", error: e})
     }
 }
 const addNewSpell = async (req, res) => {
-
     const {name, description, movies} = req.body;
     try {
         const data = await Spell({
@@ -17,10 +16,10 @@ const addNewSpell = async (req, res) => {
             description,
             movies
         })
-            data.save();
-            res.status(200).json({status: 'success', data: data})
+        data.save();
+        return res.status(200).json({status: 'success', data: data})
 
-    }catch (e) {
+    } catch (e) {
         return res.status(404).json({code: 404, message: "Not Found", error: e})
     }
 
@@ -30,7 +29,7 @@ const deleteSpell = async (req, res) => {
         const spell = await Spell.findOneAndRemove({
             _id: req.params.id,
         })
-        res.status(200).json({code: 200, success: true, message: "Delete spell", deleteSpell: spell});
+        return res.status(200).json({code: 200, success: true, message: "Delete spell", deleteSpell: spell});
     } catch (e) {
         return res.status(404).json({code: 404, message: "Not Found", error: e})
     }
@@ -48,7 +47,7 @@ const updateSpell = async (req, res) => {
                     movies: data.movies,
                 }
         })
-        res.status(200).json({code: 200, success: true, message: "Update spell", updateSpell: spell});
+        return res.status(200).json({code: 200, success: true, message: "Update spell", updateSpell: spell});
     } catch (e) {
         return res.status(404).json({code: 404, message: "Not Found", error: e})
     }
@@ -58,7 +57,7 @@ const getSpellDetails = async (req, res) => {
         const spell = await Spell.find({
             _id: req.params.id,
         })
-        res.status(200).json({code: 200, success: true, message: "Spell details", getSpellDetails: spell});
+        return res.status(200).json({code: 200, success: true, message: "Spell details", getSpellDetails: spell});
     } catch (e) {
         return res.status(404).json({code: 404, message: "Not Found", error: e})
     }

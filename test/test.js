@@ -27,9 +27,9 @@ chai.use(chaiHttp);
 
 describe("API TEST", () => {
 
-   /*
-    * Test the add new character
-    */
+    /*
+     * Test the add new character
+     */
     describe("POST /", () => {
         it("It should POST ", (done) => {
             const character = fakeCharacter
@@ -62,9 +62,9 @@ describe("API TEST", () => {
         });
     });
 
-   /*
-    * Test the update character
-    */
+    /*
+     * Test the update character
+     */
     describe("PUT /", () => {
         it("It should PUT an existing character", (done) => {
             const character = updateCharacter.data
@@ -96,9 +96,9 @@ describe("API TEST", () => {
         });
     });
 
-   /*
-    * Test the add new movie
-    */
+    /*
+     * Test the add new movie
+     */
     describe("POST /", () => {
         it("It should POST ", (done) => {
             const movie = fakeMovie
@@ -131,14 +131,14 @@ describe("API TEST", () => {
         });
     });
 
-   /*
-    * Test the update movie
-    */
+    /*
+     * Test the update movie
+     */
     describe("PUT /", () => {
         it("It should PUT ", (done) => {
             const movie = updateMovie.data
             chai.request(server)
-                .put("/api/movie/"+updateMovie.existedId)
+                .put("/api/movie/" + updateMovie.existedId)
                 .send(movie)
                 .end((err, response) => {
                     response.should.have.status(200);
@@ -156,7 +156,7 @@ describe("API TEST", () => {
         it("It should not PUT ", (done) => {
             const movie = erorUpdateMovie.data
             chai.request(server)
-                .put("/api/movie/"+updateMovie.existedId)
+                .put("/api/movie/" + updateMovie.existedId)
                 .send(movie)
                 .end((err, response) => {
                     response.should.have.status(400);
@@ -167,6 +167,72 @@ describe("API TEST", () => {
         });
     });
 
+    /*
+     * Test the add new spell
+     */
+    describe("POST /", () => {
+        it("It should POST ", (done) => {
+            const spell = fakeSpell
+            chai.request(server)
+                .post("/api/spell/newSpell")
+                .send(spell)
+                .end((err, response) => {
+                    response.should.have.status(200);
+                    response.body.data.should.be.a('object');
+                    response.body.data.name.should.be.a('string');
+                    response.body.data.description.should.be.a('string');
+                    response.body.data.movies.should.be.a('array');
+                    done();
+                });
+        });
+
+        it("It should not POST ", (done) => {
+            const spell = erorSpell
+            chai.request(server)
+                .post("/api/spell/newSpell")
+                .send(spell)
+                .end((err, response) => {
+                    response.should.have.status(400);
+                    response.should.have.property('error');
+                    response.body.should.be.a('object');
+                    done();
+                });
+        });
+    });
+
+    /*
+     * Test the update spell
+     */
+    describe("PUT /", () => {
+    it("It should PUT ", (done) => {
+        const spell = updateSpell.data
+        chai.request(server)
+            .put("/api/spell/"+updateSpell.existedId)
+            .send(spell)
+            .end((err, response) => {
+                response.should.have.status(200);
+                response.body.updateSpell.should.be.a('object');
+                response.body.updateSpell.name.should.be.a('string');
+                response.body.updateSpell.description.should.be.a('string');
+                response.body.updateSpell.movies.should.be.a('array');
+                done();
+            });
+    });
+
+
+    it("It should not PUT ", (done) => {
+        const spell = erorUpdateSpell.data
+        chai.request(server)
+            .put("/api/spell/"+updateSpell.existedId)
+            .send(spell)
+            .end((err, response) => {
+                response.should.have.status(400);
+                response.should.have.property('error');
+                response.body.should.be.a('object');
+                done();
+            });
+    });
 
 });
 
+});

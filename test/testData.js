@@ -83,9 +83,11 @@ module.exports.erorUpdateMovie = {
 }
 
 module.exports.updateSpell = {
+    existedId : '6276488363a7f49465c9c0f1',
+    data:{
     name:'sssss',
     description:'etsryhsj',
-    movies:[21,6]
+    movies:[21,6]}
 }
 
 module.exports.erorUpdateSpell = {

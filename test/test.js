@@ -18,7 +18,13 @@ const {
     updateMovie,
     erorUpdateMovie,
     updateSpell,
-    erorUpdateSpell
+    erorUpdateSpell,
+    deleteCharacter,
+    erorDeleteCharacter,
+    deleteMovie,
+    erorDeleteMovie,
+    deleteSpell,
+    erorDeleteSpell
 } = require('./testData');
 
 chai.should();
@@ -97,6 +103,40 @@ describe("API TEST", () => {
     });
 
     /*
+     * Test the delete character (change the deleteCharacter.existedId in testData.js while running)
+     */
+    // describe("DELETE /", () => {
+    //     it("It should DELETE an existing character", (done) => {
+    //         chai.request(server)
+    //             .delete("/api/character/" + deleteCharacter.existedId)
+    //             .end((err, response) => {
+    //                 response.should.have.status(200);
+    //                 response.body.should.be.a('object');
+    //                 response.body.should.have.property('code');
+    //                 response.body.should.have.property('success');
+    //                 response.body.should.have.property('message');
+    //                 response.body.deleteCharacter.should.be.a('object');
+    //                 expect(response.body.code).to.equal(200);
+    //                 expect(response.body.message).to.equal("Delete character");
+    //                 done();
+    //             });
+    //     });
+    //     it("It should not DELETE ", (done) => {
+    //         chai.request(server)
+    //             .delete("/api/character/" + erorDeleteCharacter.existedId)
+    //             .end((err, response) => {
+    //                 response.should.have.status(404);
+    //                 response.body.should.have.property('code');
+    //                 response.body.should.have.property('message');
+    //                 response.body.should.have.property('error');
+    //                 expect(response.body.code).to.equal(404);
+    //                 expect(response.body.message).to.equal("Not Found");
+    //                 done();
+    //             });
+    //     });
+    // });
+
+    /*
      * Test the add new movie
      */
     describe("POST /", () => {
@@ -168,6 +208,40 @@ describe("API TEST", () => {
     });
 
     /*
+     * Test the delete movie (change the deleteMovie.existedId in testData.js while running)
+     */
+    // describe("DELETE /", () => {
+    //     it("It should DELETE an existing movie", (done) => {
+    //         chai.request(server)
+    //             .delete("/api/movie/" + deleteMovie.existedId)
+    //             .end((err, response) => {
+    //                 response.should.have.status(200);
+    //                 response.body.should.be.a('object');
+    //                 response.body.should.have.property('code');
+    //                 response.body.should.have.property('success');
+    //                 response.body.should.have.property('message');
+    //                 response.body.deleteMovie.should.be.a('object');
+    //                 expect(response.body.code).to.equal(200);
+    //                 expect(response.body.message).to.equal("Delete movie");
+    //                 done();
+    //             });
+    //     });
+    //     it("It should not DELETE ", (done) => {
+    //         chai.request(server)
+    //             .delete("/api/movie/" + erorDeleteMovie.existedId)
+    //             .end((err, response) => {
+    //                 response.should.have.status(404);
+    //                 response.body.should.have.property('code');
+    //                 response.body.should.have.property('message');
+    //                 response.body.should.have.property('error');
+    //                 expect(response.body.code).to.equal(404);
+    //                 expect(response.body.message).to.equal("Not Found");
+    //                 done();
+    //             });
+    //     });
+    // });
+
+    /*
      * Test the add new spell
      */
     describe("POST /", () => {
@@ -235,4 +309,37 @@ describe("API TEST", () => {
 
 });
 
+    /*
+     * Test the delete spell (change the deleteSpell.existedId in testData.js while running)
+     */
+    // describe("DELETE /", () => {
+    //     it("It should DELETE an existing spell", (done) => {
+    //         chai.request(server)
+    //             .delete("/api/movie/" + deleteSpell.existedId)
+    //             .end((err, response) => {
+    //                 response.should.have.status(200);
+    //                 response.body.should.be.a('object');
+    //                 response.body.should.have.property('code');
+    //                 response.body.should.have.property('success');
+    //                 response.body.should.have.property('message');
+    //                 response.body.deleteMovie.should.be.a('object');
+    //                 expect(response.body.code).to.equal(200);
+    //                 expect(response.body.message).to.equal("Delete spell");
+    //                 done();
+    //             });
+    //     });
+    //     it("It should not DELETE ", (done) => {
+    //         chai.request(server)
+    //             .delete("/api/spell/" + erorDeleteSpell.existedId)
+    //             .end((err, response) => {
+    //                 response.should.have.status(404);
+    //                 response.body.should.have.property('code');
+    //                 response.body.should.have.property('message');
+    //                 response.body.should.have.property('error');
+    //                 expect(response.body.code).to.equal(404);
+    //                 expect(response.body.message).to.equal("Not Found");
+    //                 done();
+    //             });
+    //     });
+    // });
 });

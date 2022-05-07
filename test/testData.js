@@ -42,6 +42,13 @@ module.exports.erorSpell = {
     movies:'afsgdhf'
 }
 
+module.exports.deleteCharacter = {
+    existedId : '6276612d4e8a8239c94d4979'
+}
+module.exports.erorDeleteCharacter = {
+    existedId : '6276c4855b7'
+}
+
 module.exports.updateCharacter = {
     existedId : '62726f1e6091e6e1e954c94d',
     data:{
@@ -63,6 +70,14 @@ module.exports.erorUpdateCharacter = {
     image:[2,4]
 }
 
+module.exports.deleteMovie = {
+    existedId : '627655adae073cc0ac4855bf'
+}
+module.exports.erorDeleteMovie = {
+    existedId : '627655'
+}
+
+
 module.exports.updateMovie = {
 
     existedId : '627641d59491033c1ce80212',
@@ -80,6 +95,13 @@ module.exports.erorUpdateMovie = {
     characters:'afsgfdh',
     spells:[2,6],
     image:'afdsgdht'
+}
+
+module.exports.deleteSpell = {
+    existedId : '62765491ae073cc0ac4855bd'
+}
+module.exports.erorDeleteSpell = {
+    existedId : '6276cc0ac4855bd'
 }
 
 module.exports.updateSpell = {

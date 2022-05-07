@@ -132,41 +132,6 @@ describe("API TEST", () => {
     });
 
     /*
-    * Test the  character details
-    */
-    describe("GET /", () => {
-        it("It should GET  character", (done) => {
-            chai.request(server)
-                .get("/api/character/" + getCharacterDetails.existedId)
-                .end((err, response) => {
-                                    response.should.have.status(200);
-                                    response.body.should.be.a('object');
-                                    response.body.getCharacterDetails.should.be.a('array');
-                                    response.body.should.have.property('code');
-                                    response.body.should.have.property('success');
-                                    response.body.should.have.property('message');
-                                    expect(response.body.code).to.equal(200);
-                                    expect(response.body.message).to.equal("Character details");
-
-                    done();
-                });
-        });
-        it("It should not GET ", (done) => {
-            chai.request(server)
-                .get("/api/character/" + erorGetCharacterDetails.existedId)
-                .end((err, response) => {
-                                    response.should.have.status(404);
-                                    response.body.should.have.property('code');
-                                    response.body.should.have.property('message');
-                                    response.body.should.have.property('error');
-                                    expect(response.body.code).to.equal(404);
-                                    expect(response.body.message).to.equal("Not Found");
-                    done();
-                });
-        });
-    });
-
-    /*
      * Test the delete character (change the deleteCharacter.existedId in testData.js while running)
      */
     // describe("DELETE /", () => {
@@ -286,41 +251,6 @@ describe("API TEST", () => {
                     response.should.have.status(400);
                     response.should.have.property('error');
                     response.body.should.be.a('object');
-                    done();
-                });
-        });
-    });
-
-    /*
-     * Test the  movie details
-     */
-    describe("GET /", () => {
-        it("It should GET  movie", (done) => {
-            chai.request(server)
-                .get("/api/movie/" + getMovieDetails.existedId)
-                .end((err, response) => {
-                    response.should.have.status(200);
-                    response.body.should.be.a('object');
-                    response.body.getMovieDetails.should.be.a('array');
-                    response.body.should.have.property('code');
-                    response.body.should.have.property('success');
-                    response.body.should.have.property('message');
-                    expect(response.body.code).to.equal(200);
-                    expect(response.body.message).to.equal("Movie details");
-
-                    done();
-                });
-        });
-        it("It should not GET ", (done) => {
-            chai.request(server)
-                .get("/api/movie/" + erorGetMovieDetails.existedId)
-                .end((err, response) => {
-                    response.should.have.status(404);
-                    response.body.should.have.property('code');
-                    response.body.should.have.property('message');
-                    response.body.should.have.property('error');
-                    expect(response.body.code).to.equal(404);
-                    expect(response.body.message).to.equal("Not Found");
                     done();
                 });
         });
@@ -447,41 +377,6 @@ describe("API TEST", () => {
     });
 
 });
-
-    /*
-    * Test the  spell details
-    */
-    describe("GET /", () => {
-        it("It should GET  spell", (done) => {
-            chai.request(server)
-                .get("/api/spell/" + getSpellDetails.existedId)
-                .end((err, response) => {
-                    response.should.have.status(200);
-                    response.body.should.be.a('object');
-                    response.body.getSpellDetails.should.be.a('array');
-                    response.body.should.have.property('code');
-                    response.body.should.have.property('success');
-                    response.body.should.have.property('message');
-                    expect(response.body.code).to.equal(200);
-                    expect(response.body.message).to.equal("Spell details");
-
-                    done();
-                });
-        });
-        it("It should not GET ", (done) => {
-            chai.request(server)
-                .get("/api/spell/" + erorGetSpellDetails.existedId)
-                .end((err, response) => {
-                    response.should.have.status(404);
-                    response.body.should.have.property('code');
-                    response.body.should.have.property('message');
-                    response.body.should.have.property('error');
-                    expect(response.body.code).to.equal(404);
-                    expect(response.body.message).to.equal("Not Found");
-                    done();
-                });
-        });
-    });
 
     /*
      * Test the delete spell (change the deleteSpell.existedId in testData.js while running)

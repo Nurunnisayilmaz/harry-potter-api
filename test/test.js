@@ -13,6 +13,15 @@ const {
     erorMovie,
     fakeSpell,
     erorSpell,
+    allCharacter,
+    allMovies,
+    allSpells,
+    getCharacterDetails,
+    erorGetCharacterDetails,
+    getMovieDetails,
+    erorGetMovieDetails,
+    getSpellDetails,
+    erorGetSpellDetails,
     updateCharacter,
     erorUpdateCharacter,
     updateMovie,
@@ -66,6 +75,26 @@ describe("API TEST", () => {
                     done();
                 });
         });
+    });
+
+    /*
+     * Test the all character
+     */
+    describe("GET /", () => {
+        it("It should GET characters", (done) => {
+            const characters = allCharacter
+            chai.request(server)
+                .get("/api/character/allCharacters")
+                .send(characters)
+                .end((err, response) => {
+                    response.should.have.status(200);
+                                    response.body.allCharacters.should.be.a('array');
+                                    response.body.should.have.property('status');
+                                    expect(response.body.status).to.equal("success");
+                    done();
+                });
+        });
+
     });
 
     /*
@@ -172,6 +201,26 @@ describe("API TEST", () => {
     });
 
     /*
+     * Test the all movies
+     */
+    describe("GET /", () => {
+        it("It should GET movies", (done) => {
+            const movies = allMovies
+            chai.request(server)
+                .get("/api/movie/allMovies")
+                .send(movies)
+                .end((err, response) => {
+                    response.should.have.status(200);
+                    response.body.allMovies.should.be.a('array');
+                    response.body.should.have.property('status');
+                    expect(response.body.status).to.equal("success");
+                    done();
+                });
+        });
+
+    });
+
+    /*
      * Test the update movie
      */
     describe("PUT /", () => {
@@ -272,6 +321,26 @@ describe("API TEST", () => {
                     done();
                 });
         });
+    });
+
+    /*
+     * Test the all spells
+     */
+    describe("GET /", () => {
+        it("It should GET spells", (done) => {
+            const spells = allSpells
+            chai.request(server)
+                .get("/api/spell/allSpells")
+                .send(spells)
+                .end((err, response) => {
+                    response.should.have.status(200);
+                    response.body.allSpells.should.be.a('array');
+                    response.body.should.have.property('status');
+                    expect(response.body.status).to.equal("success");
+                    done();
+                });
+        });
+
     });
 
     /*

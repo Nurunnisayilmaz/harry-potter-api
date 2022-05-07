@@ -13,6 +13,21 @@ module.exports.erorCharacter = {
     actor:'nfgvbhm',
     image:'oljkmh'
 }
+module.exports.allCharacter = {
+  allCharacters :[{ name:'nnnnn',
+      description:'szdfgh',
+      movies:[1,2],
+      actor:'asdf',
+      image:'cxvbv'}]
+}
+
+module.exports.allMovies = {
+   allMovies :[{name:'ssss',
+       description:'shdjfk',
+       characters:[12,6],
+       spells:[5,6],
+       image:'zvxvcc'} ]
+}
 
 module.exports.fakeMovie = {
     name:'ssss',
@@ -28,6 +43,12 @@ module.exports.erorMovie = {
    // characters:[2,6],
     spells:[2,6],
     image:'lkmn'
+}
+
+module.exports.allSpells = {
+   allSpells :[{name:'aaaa',
+       description:'agshdjfgk',
+       movies:[4,2]}]
 }
 
 module.exports.fakeSpell = {
@@ -48,7 +69,24 @@ module.exports.deleteCharacter = {
 module.exports.erorDeleteCharacter = {
     existedId : '6276c4855b7'
 }
-
+module.exports.getCharacterDetails = {
+    existedId : '6272647260986c86465c9eb4'
+}
+module.exports.erorGetCharacterDetails = {
+    existedId : '62765b7'
+}
+module.exports.getMovieDetails = {
+    existedId : '6272647260986c86465c9ede'
+}
+module.exports.erorGetMovieDetails = {
+    existedId : '627655b7'
+}
+module.exports.getSpellDetails = {
+    existedId : '6272647260986c86465c9ec8'
+}
+module.exports.erorGetSpellDetails = {
+    existedId : '64855b7'
+}
 module.exports.updateCharacter = {
     existedId : '62726f1e6091e6e1e954c94d',
     data:{

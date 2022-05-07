@@ -4,7 +4,7 @@ const schema = Joi.object().keys({
     name: Joi.string().required(),
     description: Joi.string().required(),
     movies: Joi.array().required(),
-    actor:Joi.array().required(),
+    actor:Joi.string().required(),
     image:Joi.string().required()
 }).unknown(true);
 

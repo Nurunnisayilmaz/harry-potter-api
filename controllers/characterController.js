@@ -3,14 +3,14 @@ const Character = require('../models/characterModel')
 const getAllCharacters = async (req, res) => {
     try {
         const allCharacters = await Character.find();
-        res.status(200).json({status: 'success',allCharacters: allCharacters})
-    }catch (e) {
-        res.status(201).json({code: 201,message:"something went wrong",error:e})
+        return res.status(200).json({status: 'success', allCharacters: allCharacters})
+    } catch (e) {
+        return res.status(201).json({code: 201, message: "something went wrong", error: e})
     }
 }
 
 const addNewCharacter = async (req, res) => {
-    const {name,description,movies,actor,image} = req.body;
+    const {name, description, movies, actor, image} = req.body;
 
     try {
         const data = await Character({
@@ -21,9 +21,9 @@ const addNewCharacter = async (req, res) => {
             image
         })
         data.save();
-        res.status(200).json({status: 'success', data: data})
+        return res.status(200).json({status: 'success', data: data})
 
-    }catch (e) {
+    } catch (e) {
         return res.status(404).json({code: 404, message: "Not Found", error: e})
     }
 }
@@ -31,41 +31,54 @@ const addNewCharacter = async (req, res) => {
 const deleteCharacter = async (req, res) => {
     try {
         const character = await Character.findOneAndRemove({
-            _id:req.params.id,
+            _id: req.params.id,
         })
-        res.status(200).json({code: 200,success: true,message:"Delete character", deleteCharacter: character});
-    }catch (e){
-        return res.status(404).json({code: 404,message:"Not Found",error:e})
+       return res.status(200).json({code: 200, success: true, message: "Delete character", deleteCharacter: character});
+    } catch (e) {
+        return res.status(404).json({code: 404, message: "Not Found", error: e})
     }
 }
 const updateCharacter = async (req, res) => {
     const data = req.body;
     try {
         const character = await Character.findOneAndUpdate({
-            _id:req.params.id,
-        },{ $set:
+            _id: req.params.id,
+        }, {
+            $set:
                 {
-                    name:data.name,
+                    name: data.name,
                     description: data.description,
                     movies: data.movies,
-                    actor:data.actor,
-                    image:data.image
+                    actor: data.actor,
+                    image: data.image
                 }
         })
-        res.status(200).json({code: 200,success: true,message:"Update character", updateCharacter: character});
-    }catch (e){
-        return res.status(404).json({code: 404,message:"Not Found",error:e})
+        return res.status(200).json({
+            code: 200,
+            success: true,
+            message: "Update character",
+            updateCharacter: character
+        });
+    } catch (e) {
+        console.log('err occured ')
+        return res.status(404).json({code: 404, message: "Not Found", error: e})
     }
 }
 const getCharacterDetails = async (req, res) => {
     try {
         const character = await Character.find({
-            _id:req.params.id,
+            _id: req.params.id,
         })
-        res.status(200).json({code: 200,success: true,message:"Character details", getCharacterDetails: character});
-    }catch (e){
-        return res.status(404).json({code: 404,message:"Not Found",error:e})
+
+        return res.status(200).json({
+            code: 200,
+            success: true,
+            message: "Character details",
+            getCharacterDetails: character
+        });
+    } catch (e) {
+        return res.status(404).json({code: 404, message: "Not Found", error: e})
     }
 }
 
-module.exports = {getAllCharacters,addNewCharacter,deleteCharacter,updateCharacter,getCharacterDetails};
+module.exports = {getAllCharacters, addNewCharacter, deleteCharacter, updateCharacter, getCharacterDetails};

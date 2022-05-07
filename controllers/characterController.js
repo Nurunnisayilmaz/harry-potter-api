@@ -60,7 +60,6 @@ const updateCharacter = async (req, res) => {
             updateCharacter: character
         });
     } catch (e) {
-        console.log('err occured ')
         return res.status(404).json({code: 404, message: "Not Found", error: e})
     }
 }

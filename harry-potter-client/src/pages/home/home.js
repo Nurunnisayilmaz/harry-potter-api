@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import "./home.css";
+
+const harryPotterImage = new URL("../../image/hpImage.jpg",import.meta.url);
 
 function Home() {
     return (
@@ -8,9 +11,9 @@ function Home() {
             <div className="header">
                 <Header/>
             </div>
-            <div className="router">
-                <div className="router-body">
-                    <img className="homePhoto" src="https://wallpaper.dog/large/5485030.jpg"  className="img-fluid" alt="harryPotterHomeImage" ></img>
+            <div className="homeRouter">
+                <div className="homeRouter-body">
+                   <img className="harryPotterImage" src={harryPotterImage}  className="img-fluid" alt="harryPotterHomeImage" ></img>
                 </div>
             </div>
             <div className="footer">

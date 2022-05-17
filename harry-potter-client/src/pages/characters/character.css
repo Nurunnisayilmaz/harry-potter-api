@@ -1,0 +1,28 @@
+.character-text{
+    max-width: 500px;
+}
+
+.characterDescription{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.img-field-character{
+    width: 20%;
+}
+.imageCharacters{
+    max-height: 200px;
+    max-width: 200px;
+
+}
+.containerCharacter{
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 2px #888888;
+    padding: 15px;
+    margin: 15px 5px 15px 5px;
+    background:lavender;
+    align-items: center;
+}
